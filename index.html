@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phone Hunter</title>
+    <!-- bootstrap css  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+    <h4 class="text-center py-5">Welcome to my Phone Hunter</h4>
+</header>
+<main class="container">
+    <div class="d-flex col-12 col-md-6 mx-auto my-4">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="search_phone">
+        <button class="btn btn-outline-success" onclick="searchPhone()">Search</button>
+    </div>
+<section id="phone_container" class="mb-5 pb-5">
+    <div class="row row-cols-1 row-cols-md-3 g-4" id="load-phone">
+
+  <!-- load phone  -->
+      </div>
+      <!-- show all button  -->
+      <div class="d-none text-center mt-3" id="show-all">
+        <button class="btn btn-primary" id="btn-show-all">Show More</button>
+      </div>
+      <!-- not found phone  -->
+      <div id="not_found" class="d-none m-4">
+        <h4 class="text-danger text-center">Not Found ! Please Try Agian !</h4>
+      </div>
+</section>
+<section id="loading_spinner" class="d-none" style="height: 70vh; width: 100%;">
+    <div class="d-flex justify-content-center align-items-center">
+        <div class="spinner-border" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+      </div>
+</section>
+
+
+  <!-- Modal -->
+  <div class="modal fade" id="phoneDetailsModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="phoneDetailsModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" id="loadModal">
+  
+    </div>
+  </div>
+</main>
+
+    
+    <!-- bootstrap js  -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+<!-- js  -->
+<script src="js/main.js"></script>
+</body>
+</html>
